@@ -73,9 +73,10 @@ export default {
   }
 };
 </script>
-<style>
+
+<style scoped>
 button {
-    color:  white;
-    background-color: #269A4C;
+	color:  white;
+	background-color: #269A4C;
 }
 </style>
