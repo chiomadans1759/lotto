@@ -30,9 +30,14 @@ export default {
   color: #333333;
   font-size: 48px;
 }
-#not-found  p {
+#not-found p {
   font-size: 24px;
   line-height: normal; 
   color: #666666;
 }
+#not-found .play {
+  width: 220px;
+  background-color: #269A4C; 
+  color:#fff;
+} 
 </style>

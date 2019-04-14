@@ -42,6 +42,7 @@ export default {
 #navigation-landing .play {
   width: 220px;
   background-color: #269A4C; 
+  color:#fff;
 } 
 #navigation-landing .secondary {
   background: #F4F4F4;

@@ -105,7 +105,7 @@
 						<h4 class="col-md-4 ml-5">1A11</h4>
 						<div class="card col-md-7 p-3 pl-5">
 							<h6>Winning Numbers</h6>
-							<div class="card pl-2" id="card-result">
+							<div class="card pl-2">
 								<img src="/img/trys.png"> 
 							</div>
 						</div>
@@ -236,7 +236,7 @@ $animationTime: 1.5s;
 $border-color-default: #D6E7DD;;
 $border-color-fill: #269A4C;
 $size: 180px; 
-$howManySteps: 10; 
+$howManySteps: 100; 
 
 .progress {
   width: $size;
