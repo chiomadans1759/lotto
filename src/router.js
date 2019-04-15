@@ -18,15 +18,6 @@ export default new Router({
         { path: '/dashboard-result', name: 'dashboard-result', component: () => import('@/views/DashboardResult.vue') },
         { path: '/how-to-play', name: 'how-to-play', component: () => import('@/views/HowToPlay.vue') }
       ]
-    },
-    {
-      path:'/wallet',
-      component: () => import('@/layouts/Wallet.vue'),
-      children: [ 
-        { path: '', name: 'transaction-history', component: () => import('@/views/wallet/TransactionHistory.vue') }, 
-        { path: '/transfer-funds', name: 'transfer-funds', component: () => import('@/views/wallet/TransferFunds.vue') },
-        { path: '/widthdraw-funds', name: 'widthdraw-funds', component: () => import('@/views/wallet/WidthdrawFunds.vue') }, 
-      ]
     }
   ]
 });
