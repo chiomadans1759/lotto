@@ -1,7 +1,7 @@
 <template>
 <div id="main">
     <!-- Sidebar -->
-   <SideNav/>
+   <user-side-nav/>
 
     <div id="content">
       <div class="page">
@@ -16,13 +16,13 @@
 <script>
 import Header from "@/components/AppHeader";
 import Footer from "@/components/AppFooter";
-import SideNav from "@/components/UserSideNav";
+import UserSideNav from "@/components/sidenavs/UserSideNav";
 export default {
   name: "components",
   components: {
     Header,
     Footer,
-    SideNav
+    UserSideNav
   }
 };
 </script>
