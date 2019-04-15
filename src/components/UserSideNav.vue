@@ -5,6 +5,7 @@
         </div>
 
         <ul class="list-unstyled components">
+          <router-link :to="{ name: 'dashboard'}"> 
             <div class="d-flex justify-content-center  align-items-center user-detail">
               <div class="user-name-sign d-flex justify-content-center align-items-center">P</div>
               <div class="d-flex flex-column ml-4">
@@ -12,38 +13,42 @@
                 <small class="variant-white">070342637819</small>
               </div>
             </div>
+          </router-link>
           
             <li class="mt-5">
+              <router-link to="/play"> 
                <div class="items d-flex justify-content-between">
                  <div class="indicator"></div>
                  <div class="listing">
                    <i class="fas fa-play"></i>
                    <span class="ml-4">Play</span>
                  </div>
-                 
                </div>
+              </router-link>
             </li>
 
             <li class="mt-1">
+              <router-link :to="{ name: 'dashboard'}"> 
                <div class="items d-flex justify-content-between">
                  <div class="indicator"></div>
                  <div class="listing">
                    <i class="fas fa-money-check-alt"></i>
                    <span class="ml-4">My Wallet</span>
                  </div>
-                 
                </div>
+              </router-link>
             </li>
 
             <li class="mt-1">
-              <div class="items d-flex justify-content-between">
-                <div class="indicator"></div>
-                <div class="listing">
-                  <i class="fas fa-poll"></i>
-                  <span class="ml-4">Results</span>
+              <router-link :to="{ name: 'dashboard-result'}"> 
+                <div class="items d-flex justify-content-between">
+                  <div class="indicator"></div>
+                  <div class="listing">
+                    <i class="fas fa-poll"></i>
+                    <span class="ml-4">Results</span>
+                  </div>
                 </div>
-                
-              </div>
+              </router-link>
             </li>
 
             
@@ -99,6 +104,7 @@ export default {
 <style>
 #usersidebar a{
   text-decoration: none;
+  color: #fff;
 }
 #usersidebar a:hover{
   text-decoration: none;
