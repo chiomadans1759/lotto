@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper">
+    <div class="main">
     <!-- Sidebar -->
    <SideNav/>
 
@@ -21,6 +21,7 @@
 
 </div>
 </template>
+
 <script>
 import Header from "@/components/AppHeader";
 import Footer from "@/components/AppFooter";
@@ -35,7 +36,7 @@ export default {
 };
 </script>
 <style scoped>
-.wrapper{
+.main{
   background: #f4f4f4;
 }
 #content{
