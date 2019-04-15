@@ -52,7 +52,7 @@
 			<div class="row"> 
 				<pills-nav/>
 			</div>
-			<div class="row d-flex justify-content-between mt-5 col-md-8">
+			<div class="row d-flex justify-content-between mt-5 col-md-10">
 				<game-card class="game-card" v-for="(detail, index) in details" :key="index" :detail="detail"/> 
 			</div>
 		</div>  
@@ -81,7 +81,8 @@ export default {
 					last_draw: "05 Mar 2019",
 					time: '01:07:11' 
 				} 
-			]
+			],
+			pills: ["01", "02", "03", "04", "05"]
 		}
 	},
 	methods: {

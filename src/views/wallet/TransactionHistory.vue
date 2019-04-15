@@ -1,8 +1,8 @@
 <template>
   <section id="how-to-play">
-		<div class="container"> 
+		<div class=""> 
 			<div class="result-card p-5">
-				<div class="d-flex justify-content-between align-items-center border-bottom">
+				<div class="d-flex justify-content-between align-items-center border-bottom pb-3">
 					<h3>Current ballance</h3>
 					<h4 class="ml-5">N<span>100,784</span>.98</h4>
 				</div>
@@ -19,6 +19,9 @@
 					</div>
 					<h6 class="p1 pb-3 pt-4">Ticket</h6>
 				</div> 
+				<div class="row"> 
+					<pills-nav :pills="pills"/>
+				</div>
 				<div class="d-flex justify-content-between align-items-center pt-3 pb-2 border-bottom">
 					<div class="d-flex align-items-center">
 						<p class="p6 mr-4 d-flex justify-content-center align-items-center"><i class="fas fa-arrow-down"></i></p>
@@ -75,11 +78,13 @@
 </template>
 
 <script> 
-
+import PillsNav from "@/components/PillsNav.vue"
 export default {  
+	components: { PillsNav },
 	data() {
 		return {
-			tabIndex: 0
+			tabIndex: 0,
+			pills: ["01", "02", "03", "04", "05"]
 		}
 	},
 	methods: {
@@ -114,7 +119,7 @@ ul {
 
 <style scoped> 
 #how-to-play {
-	background: #E5E5E5;
+	background: #fffffe;
 } 
 #how-to-play .border-boda {
 	border-bottom: 2px solid rgba(20, 0, 5, 0.1)!important;

@@ -9,11 +9,8 @@
 <script> 
 
 export default {  
-	data() {
-		return {
-			tabIndex: 0, 
-			pills: ["01", "02", "03", "04", "05"]
-		}
+	props: { 
+    pills: Array
 	},
 	methods: {
 		linkClass(index) {
