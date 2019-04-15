@@ -19,7 +19,7 @@
 <script>
 import Header from "@/components/AppHeader";
 import Footer from "@/components/AppFooter";
-import SideNav from "@/components/PlaySideNav";
+import SideNav from "@/components/sidenavs/PlaySideNav";
 export default {
   name: "components",
   components: {

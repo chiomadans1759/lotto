@@ -28,11 +28,19 @@ export default new Router({
       path: "/dashboard",
       component: () => import('@/layouts/UserDashboard.vue'),
       children: [ 
-        { path: '', name: 'dashboard', component: () => import('@/views/Dashboard.vue') },
-        { path: 'results', name: 'dashboard-result', component: () => import('@/views/DashboardResult.vue') }
-        
+        { path: '', name: 'dashboard', component: () => import('@/views/dashboard/Dashboard.vue') },
+        { path: 'results', name: 'dashboard-result', component: () => import('@/views/dashboard/DashboardResult.vue') }
       ]
     },
+    {
+      path:'/wallet',
+      component: () => import('@/layouts/Wallet.vue'),
+      children: [ 
+        { path: '', name: 'transaction-history', component: () => import('@/views/wallet/TransactionHistory.vue') }, 
+        { path: 'transfer-funds', name: 'transfer-funds', component: () => import('@/views/wallet/TransferFunds.vue') },
+        { path: 'widthdraw-funds', name: 'widthdraw-funds', component: () => import('@/views/wallet/WidthdrawFunds.vue') }, 
+      ]
+    }
 
 
   ]
