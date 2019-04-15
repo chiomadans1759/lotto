@@ -1,7 +1,18 @@
 <template>
   <section id="dashboard">
 		<div class="container py-5">
-			<h1 class="mb-4">Dashboard</h1>
+			<div class="d-flex justify-content-between align-items-center mb-4">
+				<h1>Dashboard</h1>
+				<div class="d-flex justify-content-between align-items-center">
+					<p class="p2 pr-3 mt-3">Currency</p>
+					<b-tabs v-model="tabIndex">
+						<b-tab title="NGN" :title-link-class="linkClass(0)"></b-tab>
+						<b-tab title="USD" :title-link-class="linkClass(1)"></b-tab>
+						<b-tab title="JPA" :title-link-class="linkClass(2)"></b-tab>
+						<b-tab title="ZAR" :title-link-class="linkClass(3)"></b-tab> 
+					</b-tabs>
+				</div>
+			</div>
 			<div class="d-flex justify-content-between mb-2">
 				<div class="card px-5 pt-4 pb-2 bg-white card-one"> 
 					<h3>Current Balance<br><span> Tuesday, 6th April 2019</span></h3>
@@ -120,10 +131,42 @@
 
 <script>
 export default {
-
+	data() {
+		return {
+			tabIndex: 0,	  
+		}
+	},
+	methods: {
+		linkClass(idx) {
+			if (this.tabIndex === idx) {
+				return ['pill-green', 'text-white']
+			} else {
+				return ['pill-default', 'text-black']
+			}
+		}
+	}
 }
 </script>
-
+<style>
+.pill-green { 
+	background: #269A4C !important;
+	margin-left:5px;
+	padding:2px 15px; 
+	border-radius:5px;
+	background-image: url("/img/america.jpg");
+}
+ul { 
+	border:none !important;
+} 
+.pill-default {
+	border: 1.5px solid #E8E8E8 !important;
+	margin-left:5px;
+	padding:2px 8px; 
+	padding:2px 15px; 
+	border-radius:5px;
+	background: #fff;
+}
+</style>
 <style lang="scss" scoped> 
 #dashboard {
 	background: #E5E5E5;
