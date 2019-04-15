@@ -16,6 +16,6 @@ Vue.use(Argon);
 Vue.use(vmodal);
 Vue.use(BootstrapVue)
 new Vue({
-  router,
-  render: h => h(App)
+ router,
+ render: h => h(App)
 }).$mount("#app");
