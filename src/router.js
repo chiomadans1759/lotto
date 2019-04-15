@@ -4,6 +4,7 @@ Vue.use(Router);
 
 export default new Router({
   linkExactActiveClass: "active",
+  mode: "history",
   routes: [
     {
       path: "/",
@@ -15,7 +16,16 @@ export default new Router({
         // { path: '/register', name: 'register', component: () => import('@/views/Register.vue') },
         // { path: '/profile', name: 'submitted', component: () => import('@/views/Profile.vue') }
       ]
-    }
+    },
+    {
+      path: "/play",
+      component: () => import('@/layouts/DefaultWithSideNav.vue'),
+      children: [ 
+        { path: '', name: 'play', component: () => import('@/views/Play.vue') },
+        
+      ]
+    },
+
 
   ],
   scrollBehavior: to => {
