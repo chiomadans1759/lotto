@@ -13,7 +13,7 @@ export default new Router({
       children: [ 
         { path: '', name: 'landing', component: () => import('@/views/Landing.vue') }, 
         { path: '/not-found', name: 'not-found', component: () => import('@/views/NotFound.vue') },
-        { path: '/dashboard-result', name: 'dashboard-result', component: () => import('@/views/DashboardResult.vue') }
+        
       ]
     },
     {
@@ -26,9 +26,10 @@ export default new Router({
     },
     {
       path: "/dashboard",
-      component: () => import('@/layouts/UserDashBoard.vue'),
+      component: () => import('@/layouts/UserDashboard.vue'),
       children: [ 
         { path: '', name: 'dashboard', component: () => import('@/views/Dashboard.vue') },
+        { path: 'results', name: 'dashboard-result', component: () => import('@/views/DashboardResult.vue') }
         
       ]
     },

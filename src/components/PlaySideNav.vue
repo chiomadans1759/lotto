@@ -5,6 +5,7 @@
         </div>
 
         <ul class="list-unstyled components">
+          <router-link to="/dashboard"> 
             <div class="d-flex justify-content-center  align-items-center user-detail">
               <div class="user-name-sign d-flex justify-content-center align-items-center">P</div>
               <div class="d-flex flex-column ml-4">
@@ -12,6 +13,7 @@
                 <small class="variant-white">070342637819</small>
               </div>
             </div>
+          </router-link>
             <div class="play">
               <span>Play</span>
             </div>
@@ -235,6 +237,7 @@ export default {
 <style>
 #sidebar a{
   text-decoration: none;
+  color: #fff;
 }
 #sidebar a:hover{
   text-decoration: none;
