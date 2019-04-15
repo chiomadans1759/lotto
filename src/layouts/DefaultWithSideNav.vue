@@ -1,5 +1,5 @@
 <template>
-    <div class="main">
+<div id="main">
     <!-- Sidebar -->
    <SideNav/>
 
@@ -7,14 +7,8 @@
       <!-- Header -->
       <div class="header">Header goes here</div>
 
-      <div class="page-title mt-4 mb-4">Title of Page goes here</div>
-
       <div class="page">
-        <router-view></router-view>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex iste rerum 
-        harum dolorum praesentium laboriosam unde delectus sed, iusto hic modi neque consectetur 
-        veritatis cupiditate minus, consequuntur earum corporis distinctio!
-        
+        <router-view></router-view>     
       </div>
         <!-- <Footer/> -->
     </div>
@@ -36,24 +30,27 @@ export default {
 };
 </script>
 <style scoped>
-.main{
-  background: #f4f4f4;
-}
-#content{
-  width: 100%;
-  margin-left: 329px;
-  /* background:red; */
+#main{
+  background: #E5E5E5;
   height: 100vh;
+  /* overflow-y: scroll; */
 }
-.header{
+#main #content{
+  width: 100%;
+  margin-left: 310px;
+  height: 100vh;
+  overflow-y: scroll;
+}
+#main .header{
   background: #fff;
 }
-.page-title{
+#main .page-title{
   background: transparent;
 }
-.page{
+#main .page{
   background: #fff;
-  width: 71%;
+  width: 75%;
+  overflow-y: scroll;
 }
 
 

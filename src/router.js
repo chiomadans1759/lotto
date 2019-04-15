@@ -13,16 +13,22 @@ export default new Router({
       children: [ 
         { path: '', name: 'landing', component: () => import('@/views/Landing.vue') }, 
         { path: '/not-found', name: 'not-found', component: () => import('@/views/NotFound.vue') },
-        { path: '/dashboard', name: 'dashboard', component: () => import('@/views/Dashboard.vue') },
-        { path: '/dashboard-result', name: 'dashboard-result', component: () => import('@/views/DashboardResult.vue') },
-        { path: '/how-to-play', name: 'how-to-play', component: () => import('@/views/HowToPlay.vue') }
+        { path: '/dashboard-result', name: 'dashboard-result', component: () => import('@/views/DashboardResult.vue') }
       ]
     },
     {
       path: "/play",
       component: () => import('@/layouts/DefaultWithSideNav.vue'),
       children: [ 
-        { path: '', name: 'play', component: () => import('@/views/Play.vue') },
+        { path: '', name: 'play', component: () => import('@/views/HowToPlay.vue') },
+        
+      ]
+    },
+    {
+      path: "/dashboard",
+      component: () => import('@/layouts/UserDashBoard.vue'),
+      children: [ 
+        { path: '', name: 'dashboard', component: () => import('@/views/Dashboard.vue') },
         
       ]
     },
