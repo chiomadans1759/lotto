@@ -49,38 +49,22 @@
                   </div>
                 </div>
               </router-link>
-            </li>
-
-            
-
-         
-
-            
-            
+            </li> 
         </ul>
     </nav>
 </template>
 <script>
 export default {
   name: "components",
-  mounted(){
-    // Get the container element
-    // var btnContainer = document.getElementById("collapse-1");
-
-    // Get all buttons with class="btn" inside the container
-    var btns = document.getElementsByClassName("items");
-
-    // Loop through the buttons and add the active class to the current/clicked button
+  mounted(){ 
+    var btns = document.getElementsByClassName("items"); 
     for (var i = 0; i < btns.length; i++) {
       btns[i].addEventListener("click", function() {
-
         var current = document.getElementsByClassName("activate");
-
         // If there's no active class
         if (current.length > 0) { 
           current[0].className = current[0].className.replace(" activate", "");
         }
-
         // Add the active class to the current/clicked button
         this.childNodes[0].className += " activate";
       });
@@ -113,10 +97,10 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 300px;
-  position: fixed;
+  width: 300px; 
   top: 0;
   left: 0;
+  position:fixed;
   height: 100vh;
   z-index: 999;
   background: url('~/img/theme/side-nav.png');
