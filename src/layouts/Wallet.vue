@@ -1,7 +1,7 @@
 <template>
   <div id="main"> 
     <!-- Wallet Sidebar -->
-    <SideNav/>
+    <user-side-nav/>
     <div class="wallet">
       <div class="page">
         <router-view></router-view>  
@@ -11,11 +11,11 @@
 </template>
 
 <script>  
-import SideNav from "@/components/UserSideNav";
+import UserSideNav from "@/components/sidenavs/UserSideNav";
 export default {
   name: "components",
   components: { 
-    SideNav
+    UserSideNav
   }
 };
 </script>

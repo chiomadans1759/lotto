@@ -28,9 +28,8 @@ export default new Router({
       path: "/dashboard",
       component: () => import('@/layouts/UserDashboard.vue'),
       children: [ 
-        { path: '', name: 'dashboard', component: () => import('@/views/Dashboard.vue') },
-        { path: 'results', name: 'dashboard-result', component: () => import('@/views/DashboardResult.vue') }
-        
+        { path: '', name: 'dashboard', component: () => import('@/views/dashboard/Dashboard.vue') },
+        { path: 'results', name: 'dashboard-result', component: () => import('@/views/dashboard/DashboardResult.vue') }
       ]
     },
     {

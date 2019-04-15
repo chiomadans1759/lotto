@@ -6,7 +6,7 @@
 					<h3>Current ballance</h3>
 					<div class="text-center">
 						<h4 class="ml-5">N<span>100,784</span>.98<br></h4> 
-						<h6>N100,748.94 - N 10,000.48</h6>
+						<h6 class="ml-4">N100,748.94 - N 10,000.48</h6>
 					</div>
 				</div> 
 				<div class="d-flex justify-content-between align-items-center border-bottom direct-bet py-3">
