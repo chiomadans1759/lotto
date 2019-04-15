@@ -67,8 +67,8 @@
 					</div>
 				</div> 
 			</div> 
-			<div class="row d-flex justify-content-between game-card">
-				<game-card v-for="(detail, index) in details" :key="index" :detail="detail"/>
+			<div class="d-flex justify-content-between mx-0">
+				<game-card class="game-card" v-for="(detail, index) in details" :key="index" :detail="detail"/>
 			</div>
 		</div>  
 	</section>
@@ -121,7 +121,9 @@ export default {
 #dashboard-result .result-card {
 	width:100%;
 }
-
+#dashboard-result  .btn {
+	text-transform: none!important;
+}
 #dashboard-result p { 
 	font-size: 24px;
 	line-height: 46px; 
@@ -164,33 +166,6 @@ export default {
 }
 #dashboard-result .game-card {
 	padding-bottom:20vh;
-}
-/*
-#dashboard p i{ 
-	font-size: 20px; 
-	color: #666666; 
-}
-#dashboard h3 {
-	font-size: 20px; 
-	color: #333333; 
-	font-weight: bold;
-	line-height:22px;
-}
-#dashboard h3 span {
-	font-size: 16px; 
-	color: #666666; 
-}
-#dashboard h4 {
-	font-size: 30px;
-	color: #269A4C;
-	font-weight:bold;
-}
-#dashboard .result h4 { 
-	color: #21703A; 
-}
-#dashboard h4 span{
-	font-size: 58px;
-	color: #269A4C;
-	font-weight:bolder;
-}   */
+	width:32.5%;
+} 
 </style>

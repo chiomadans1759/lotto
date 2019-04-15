@@ -3,7 +3,7 @@
     <div class="container">
       <h3 class="top-text text-center my-5">Top Games</h3>
       <div class="row d-flex justify-content-between">
-        <game-card v-for="(detail, index) in details" :key="index" :detail="detail"/>
+        <game-card class="game-card" v-for="(detail, index) in details" :key="index" :detail="detail"/>
       </div>
     </div>
   </section>
@@ -45,5 +45,8 @@ export default {
   color: #21703A;
   font-weight: bolder; 
   text-align: center; 
+} 
+#top-game  .game-card { 
+	width:32.5%;
 } 
 </style>
