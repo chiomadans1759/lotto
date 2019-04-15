@@ -49,8 +49,11 @@
 				<div class="d-flex justify-content-end pr-0">
 					<button class="btn play btn-lg py-2 px-4 bold">Add to Cart</button> </div>
 			</div> 
+			<div class="row"> 
+				<pills-nav/>
+			</div>
 			<div class="row d-flex justify-content-between mt-5 col-md-8">
-				<game-card class="game-card" v-for="(detail, index) in details" :key="index" :detail="detail"/>
+				<game-card class="game-card" v-for="(detail, index) in details" :key="index" :detail="detail"/> 
 			</div>
 		</div>  
 	</section>
@@ -58,9 +61,10 @@
 
 <script>
 import GameCard from "@/components/GameCard.vue"
+import PillsNav from "@/components/PillsNav.vue"
 
 export default { 
-	components: { GameCard },
+	components: { GameCard, PillsNav },
 	data() {
 		return {
 			tabIndex: 0,	 
