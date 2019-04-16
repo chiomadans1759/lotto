@@ -17,11 +17,13 @@
 							<b-tab title="ZAR" :title-link-class="linkClass(3)"></b-tab> 
 						</b-tabs>
 					</div>
-					<h6 class="p1 pb-3 pt-4">Ticket</h6>
-				</div> 
-				<div class="row"> 
-					<pills-nav :pills="pills"/>
-				</div>
+					<b-form-select 
+						v-model="selected"
+						:options="date"
+						class="col-2 mx-2 select drop-down"> 
+						<option :value="null">Date<i class="fas fa-arrow-down"></i></option>
+					</b-form-select>  
+				</div>  
 				<div class="d-flex justify-content-between align-items-center pt-3 pb-2 border-bottom">
 					<div class="d-flex align-items-center">
 						<p class="p6 mr-4 d-flex justify-content-center align-items-center"><i class="fas fa-arrow-down"></i></p>
@@ -37,7 +39,7 @@
 						<p class="p7 mr-4 d-flex justify-content-center align-items-center"><i class="fas fa-arrow-down"></i></p>
 						<p class="p1">07097453799<br><span>01/5/2019</span></p>
 					</div>
-					<p class="p3">Online Payment</p>
+					<p class="p3">Bank Transfer</p>
 					<div>
 						<p class="p8">51, 800.79<br><span>02:03</span></p>
 					</div>
@@ -47,7 +49,7 @@
 						<p class="p7 mr-4 d-flex justify-content-center align-items-center"><i class="fas fa-arrow-down"></i></p>
 						<p class="p1">07097453799<br><span>01/5/2019</span></p>
 					</div>
-					<p class="p3">Online Payment</p>
+					<p class="p3">Wallet to Wallet</p>
 					<div>
 						<p class="p8">51, 800.79<br><span>02:03</span></p>
 					</div>
@@ -77,14 +79,13 @@
 	</section>
 </template>
 
-<script> 
-import PillsNav from "@/components/PillsNav.vue"
-export default {  
-	components: { PillsNav },
+<script>  
+export default {   
 	data() {
 		return {
 			tabIndex: 0,
-			pills: ["01", "02", "03", "04", "05"]
+			selected: null, 
+			date:["Yesterday", "Last Week", "Last Month", "Last Quarters"]
 		}
 	},
 	methods: {
@@ -110,9 +111,10 @@ ul {
 } 
 .pill-default {
 	border: 1.5px solid #E8E8E8 !important;
+	background: #F9F9F9;
 	margin-left:5px;
-	padding:2px 8px; 
-	padding:2px 15px; 
+	padding:2px 8px;
+	padding:2px 15px;
 	border-radius:5px;
 }
 </style>
@@ -194,4 +196,10 @@ ul {
 	color: #269A4C;
 	font-weight:bolder;
 } 
+#how-to-play .select,
+#how-to-play select{
+	font-size: 20px; 
+	color: #B0B0B3;
+	background-color: #F9F9F9;
+}
 </style>
