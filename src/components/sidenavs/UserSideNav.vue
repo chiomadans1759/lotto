@@ -1,7 +1,7 @@
 <template>
  <nav id="usersidebar">
         <div class="sidebar-header">
-          <span><img class="logo" src="img/brand/logo.png" alt="logo"></span>
+          <span><img class="logo" src="/img/brand/logo.png" alt="logo"></span>
         </div>
 
         <ul class="list-unstyled components">
@@ -28,7 +28,7 @@
             </li>
 
             <li class="mt-1">
-              <router-link :to="{ name: 'dashboard'}"> 
+              <router-link to="/wallet"> 
                <div class="items d-flex justify-content-between">
                  <div class="indicator"></div>
                  <div class="listing">
@@ -61,11 +61,16 @@ export default {
     for (var i = 0; i < btns.length; i++) {
       btns[i].addEventListener("click", function() {
         var current = document.getElementsByClassName("activate");
+        var current2 = document.getElementsByClassName("bolder");
         // If there's no active class
         if (current.length > 0) { 
           current[0].className = current[0].className.replace(" activate", "");
         }
+          if (current2.length > 0) { 
+          current2[0].className = current2[0].className.replace(" bolder", "");
+        }
         // Add the active class to the current/clicked button
+        this.className += " bolder"
         this.childNodes[0].className += " activate";
       });
     }
@@ -135,8 +140,16 @@ export default {
 #usersidebar .items{
   height: 65px;
   line-height: 75px;
-  font-weight: bold;
   cursor: pointer;
+}
+#usersidebar .items:hover{
+ font-weight: bold;
+}
+#usersidebar .items:hover .indicator{
+ background: #fff;
+}
+#usersidebar .bolder{
+  font-weight: bold;
 }
 #usersidebar .indicator{
     height: 100%;

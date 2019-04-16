@@ -16,7 +16,7 @@
 <script>
 import Header from "@/components/AppHeader";
 import Footer from "@/components/AppFooter";
-import SideNav from "@/components/WalletSideNav";
+import SideNav from "@/components/sidenavs/WalletSideNav";
 export default {
   name: "components",
   components: {

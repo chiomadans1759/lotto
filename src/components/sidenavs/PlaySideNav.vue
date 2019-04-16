@@ -1,7 +1,7 @@
 <template>
   <nav id="sidebar">
     <div class="sidebar-header">
-      <span><img class="logo" src="img/brand/logo.png" alt="logo"></span>
+      <span><img class="logo" src="/img/brand/logo.png" alt="logo"></span>
     </div>
 
     <ul class="list-unstyled components">

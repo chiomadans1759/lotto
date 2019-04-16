@@ -12,6 +12,11 @@ export default {
 	props: { 
     pills: Array
 	},
+	data(){
+		return{
+			tabIndex: 0
+		}
+	},
 	methods: {
 		linkClass(index) {
 			if (this.tabIndex === index) {
