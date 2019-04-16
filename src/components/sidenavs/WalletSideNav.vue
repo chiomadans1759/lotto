@@ -42,7 +42,7 @@
             </li>
 
             <li class="mt-1">
-              <router-link :to="{name:'transfer-funds'}"> 
+              <router-link to="/wallet"> 
                 <div class="items d-flex justify-content-between">
                   <div class="indicator"></div>
                   <div class="listing">
