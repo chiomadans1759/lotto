@@ -5,10 +5,13 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "start": "node server.js",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "bootstrap-vue": "^2.0.0-rc.11",
+    "express": "^4.16.4",
     "flatpickr": "^4.5.1",
     "jquery": "^3.4.0",
     "nouislider": "^11.1.0",
