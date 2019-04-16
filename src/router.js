@@ -34,7 +34,7 @@ export default new Router({
     },
     {
       path:'/wallet',
-      component: () => import('@/layouts/Wallet.vue'),
+      component: () => import('@/layouts/WalletLayout.vue'),
       children: [ 
         { path: '', name: 'transaction-history', component: () => import('@/views/wallet/TransactionHistory.vue') }, 
         { path: 'transfer-funds', name: 'transfer-funds', component: () => import('@/views/wallet/TransferFunds.vue') },
